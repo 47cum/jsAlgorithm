@@ -1,1 +1,5 @@
-console.log("this is github test file")
+function greeting() {
+  console.log("hello, this is test file!");
+}
+
+greeting();
