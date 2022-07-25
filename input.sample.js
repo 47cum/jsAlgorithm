@@ -1,3 +1,4 @@
+//input에 대한 함수 예시
 const solution = (data) => {
   console.log(data);
 };
