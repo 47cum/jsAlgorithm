@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(x,y,z){
+                let answer;
+                if(x<y) answer=x;
+                else answer=y;
+                if(z<answer) answer=z;
+                return answer;
+            }
+
+            console.log(solution(6, 5, 11));
+        </script>
+    </body>
+</html>
