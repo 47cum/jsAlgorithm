@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "";
+        for (let x of s) {
+          if (x === "A") {
+            answer += "#";
+          } else {
+            answer += x;
+          }
+        }
+        return answer;
+      }
+      let str = "BANANA";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = s; //string은 얕은복사 안된다 값이 복사되는것. 배열처럼 주소복사 하는게 아니다.
+        answer = answer.replace(/A/g, "#");
+        return answer;
+      }
+      let abc = "BANANA";
+      console.log(solution(abc));
+    </script>
+  </body>
+</html>
