@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s, t) {
+        let answer = 0;
+        for (let x of s) {
+          if (x === t) answer++;
+        }
+        return answer;
+      }
+
+      let str = "COMPUTERPROGRAMMING";
+      console.log(solution(str, "R"));
+    </script>
+  </body>
+</html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s, t) {
+        let answer = s.split(t).length; //끝자리에 찾는 문자가 들어가면 빈 문자열이 하나 생기면서 구분한다.
+        return answer - 1;
+      }
+
+      let abc = "COMPUTERPROGRAMMING";
+      console.log(solution(abc, "G"));
+    </script>
+  </body>
+</html>
