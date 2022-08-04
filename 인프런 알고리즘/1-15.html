@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer;
+        let mid = Math.floor(s.length / 2);
+        //   if (s.length % 2 == 1) {
+        //     answer = s.substring(mid, mid + 1); //mid번째 인덱스부터 mid+1번째 인덱스 전까지 (포함안함)
+        //   } else {
+        //     answer = s.substring(mid - 1, mid + 1);
+        //   }
+
+        if (s.length % 2 == 1) {
+          answer = s.substr(mid, 1); //mid번째 인덱스부터 mid+1개를 뽑아라
+        } else {
+          answer = s.substr(mid - 1, 2);
+        }
+
+        return answer;
+      }
+      console.log(solution("study"));
+      console.log(solution("good"));
+      console.log(solution("abcdef"));
+      console.log(solution("beautiful"));
+    </script>
+  </body>
+</html>
