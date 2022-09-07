@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(m, product) {
+        let answer = 0; //counting
+        let n = product.length;
+        product.sort((a, b) => a[0] + a[1] - (b[0] + b[1])); //[0] 가격 , [1] 배송비 정렬
+        for (let i = 0; i < n; i++) {
+          //i=할인하려는 자리
+          let money = m - (product[i][0] / 2 + product[i][1]); //전체가격-(할인가격+배송비)
+          let cnt = 1;
+          for (let j = 0; j < n; j++) {
+            //나머지 상품 사는 것
+            if (j !== i && product[j][0] + product[j][1] > money) break;
+            if (j !== i && product[j][0] + product[j][1] <= money) {
+              money -= product[j][0] + product[j][1];
+              cnt++;
+            }
+          }
+          answer = Math.max(answer, cnt);
+        }
+        return answer;
+      }
+
+      let arr = [
+        [6, 6],
+        [2, 2],
+        [4, 3],
+        [4, 5],
+        [10, 3],
+      ];
+      console.log(solution(28, arr));
+    </script>
+  </body>
+</html>
